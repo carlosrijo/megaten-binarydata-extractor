@@ -3,9 +3,6 @@ from extractor import Extractor
 from FormatsAndFiles import formatsFiles as faf
 from config import base_input_directory_sbin, base_output_directory_xml_or_tsv
 
-def prettyPrintDictEntry(format):
-    print("{key}, {value}".format(key=format, value=faf[format]))
-
 extractor = Extractor(base_input_directory_sbin, base_output_directory_xml_or_tsv)
 
 option = sys.argv[1] if len(sys.argv) > 1 else "load"
