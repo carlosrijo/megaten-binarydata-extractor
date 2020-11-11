@@ -44,7 +44,7 @@ class XmlParser(object):
     for elem in sorted(list(dict.fromkeys(xmlSchema))):
       lastCharIndex = elem.rfind('.') + 1
       strToRemove = elem[0:lastCharIndex]
-      newStr = ' ' * math.floor(len(strToRemove)/6)
+      newStr = ' ' * int(math.floor(len(strToRemove)/6))
       res.append(elem.replace(strToRemove, newStr))
     with open(outputFileName, 'w') as outputFile:
       for field in res:
